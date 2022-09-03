@@ -1,0 +1,79 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %} {%
+import "bootstrap/fixes.html" as fixes %} {% block title %}Page{% endblock %} {%
+block content %}
+
+<html lang="en">
+  <head>
+    <title>MiniProject</title>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+
+      /* Header/logo Title */
+      .header {
+        padding: 100px;
+        text-align: center;
+        background: #c4c4ed;
+        color: black;
+      }
+
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Graphic Era Deemed To Be University</h1>
+    </div>
+
+
+    <div class="row">
+      <div class="main">
+       <section>
+
+  <div class="container">
+  <h1 style="color:brown"><center>Question Answering System</center></h1>
+  <hr>
+
+<center>
+
+  <h2>Question</h2>
+  <div class="well">
+  {{ question }}
+</div>
+  <h2 style="color:red;">Answer</h2>
+  </center>
+
+  <div class="well well-sm">
+  <p style="white-space: pre-line">
+  {{ answer }}
+</p>
+</div>
+
+<center>
+  <br>
+
+  <a href = "/" class = "btn btn-info" role="button">Move to next question</a>
+</center>
+</div>
+
+</section>
+
+    <div class="footer">
+      <h2>By Sakshi Goyal</h2>
+    </div>
+      </div>
+      </div>
+  </body>
+</html>
+
+{% endblock %} {% block head %} {{super()}} {{fixes.ie8()}} {% endblock %}
