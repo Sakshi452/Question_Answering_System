@@ -1,0 +1,67 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %} {%
+import "bootstrap/fixes.html" as fixes %} {% block title %}Page{% endblock %} {%
+block content %}
+
+
+<html lang="en">
+  <head>
+    <title>MiniProject</title>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Header/logo Title */
+      .header {
+        padding: 100px;
+        text-align: center;
+        background: #c4c4ed;
+        color: black;
+      }
+
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Graphic Era Deemed To Be University</h1>
+    </div>
+<div class="row">
+      <div class="main">
+       <section>
+
+  <div class="container">
+  <h1 style="color:brown"><center>Question Answering System</center></h1>
+  <hr>
+
+    <div class="row">
+      <div class="main">
+        <h2 style="color:red"><center>What's your Question?</center></h2>
+        <center>
+          {{ wtf.quick_form(form, button_map={'submit_button': 'primary'}) }}
+        </center>
+
+
+
+    <div class="footer">
+      <h2>By Sakshi Goyal</h2>
+    </div>
+      </div>
+    </div>
+  </div>
+       </section>
+      </div>
+</div>
+  </body>
+</html>
+
+{% endblock %} {% block head %} {{super()}} {{fixes.ie8()}} {% endblock %}
