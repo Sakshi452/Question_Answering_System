@@ -51,6 +51,7 @@ def create_app(configfile=None):
 app = create_app()
 
 if __name__ == '__main__':
-    http_server = WSGIServer(('127.0.0.1', 2001), app)
-    print("starting server on port 2001")
-    http_server.serve_forever()
+#     http_server = WSGIServer(('127.0.0.1', 2001), app)
+#     print("starting server on port 2001")
+#     http_server.serve_forever()
+      app.run()
